@@ -58,13 +58,13 @@ export class FormsExperimentComponent {
 
 
   constructor() {
-    this.mockService.getAddresses()
-      .pipe(takeUntilDestroyed())
-      .subscribe(addrs => {
-        while (this.form.controls.addresses.controls.length > 0) {
-          this.form.controls.addresses.removeAt(0)
-        }
-      })
+    // this.mockService.getAddresses()
+    //   .pipe(takeUntilDestroyed())
+    //   .subscribe(addrs => {
+    //     while (this.form.controls.addresses.controls.length > 0) {
+    //       this.form.controls.addresses.removeAt(0)
+    //     }
+    //   })
     this.form.controls.type.valueChanges
       .pipe(takeUntilDestroyed())
       .subscribe(val => {
